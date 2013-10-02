@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
   });
 });
 
-app.listen(3000);
+app.listen(3005);
 
 function addTimestamps (postName, callback) {
   var filename = path.join(__dirname, ARTICLE_DIR, postName)

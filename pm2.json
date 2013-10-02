@@ -1,0 +1,5 @@
+{
+  "name"      : "blog",
+  "script"    : "/home/ubuntu/blog/site/index.js",
+  "instances" : "1"
+}
