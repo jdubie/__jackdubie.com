@@ -1,15 +1,19 @@
 <html>
   <head>
+    <link rel="stylesheet" href="github.css">
     <style>
       * { font-family: monospace; }
+      body {
+        width: 800px;
+      }
     </style>
   </head>
   <body>
     <h1>
-      codezilla
+      jackdubie.com
     </h1>
     {{#each posts}}
-      {{ctime}}
+      <p>{{ctime}}</p>
       {{{html}}}
       <p>-------------------------------------------------------------------------------</p>
     {{/each}}

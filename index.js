@@ -10,6 +10,7 @@ var express = require('express'),
 var ARTICLE_DIR = 'articles';
 
 var app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res) {
   getMostRecent(5, function (err, recent) {
@@ -46,7 +47,7 @@ function getMostRecent (n, callback) {
     async.map(contents, addTimestamps, function (err, posts) {
       if (err) return callback(err);
       posts = _(_(posts).sortBy(function (post) {
-        return post.ctime;
+        return -post.ctime;
       })).first(n);
       async.map(posts, addContents, callback);
     });
