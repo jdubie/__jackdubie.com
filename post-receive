@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# This script pull from bare repo when bare repo is pushed to
+
+SITE=/home/ubuntu/blog/site
+exec git --git-dir=$SITE/.git fetch
+exec git --git-dir=$SITE/.git --work-tree=$SITE merge origin/master
